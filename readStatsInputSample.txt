@@ -1,0 +1,4 @@
+infantry light 10 2 2 2 light,medium
+mechanizedInfantry medium 20 10 4 2 light
+tanks heavy 32 10 8 4 medium
+antiTank light 10 1 8 4 heavy

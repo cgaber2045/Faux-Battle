@@ -1,0 +1,23 @@
+struct Unit {
+	string ID;
+	string unitClass;
+	double currentHP;
+	int speed;
+	double power;
+	tuple<int,int,int> currentLocation;
+	int range;
+	
+	Unit(int id, string cl, double chp, int spd, double pwr, tuple<int,int,int> curloc, int rng) : 
+	ID(id), unitClass(cl), currentHP(chp), speed(spd), power(pwr), currentLocation(curloc), range(rng) {}
+	};
+	
+
+struct Order {
+	vector<string> actions; // contains consecutive moves up to the value of speed
+	vector<char> moveSequence; // if moving, contains 'L','R','U','D' to give in what direction to move 
+	vector<string> targetIDs; // a vector giving the ID values of each unit to be targeted (in order).
+	// to target the same unit until destruction, then move on, put the first unit's targetID X times, 
+	// where X is your speed; then put the next unit's targetID.
+	string targetClass;  // if no targetIDs (or if all targetIDs destroyed), unit will target whatever 
+	// unit class is specified here until they are all destroyed.
+};
